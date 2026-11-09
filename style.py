@@ -77,8 +77,14 @@ def load_css():
     
     /* success box ("Best model...")*/
     div[data-testid="stAlert"] {{
-        background: {CARD}; color: {INK}; border-radius: 14px;
+        background: {CARD} !important; 
+        color: {INK} !important; 
+        border-radius: 14px !important; 
+        border: 1px solid {ACCENT} !important;
+        border-left: 6px solid {ACCENT} !important;
     }}
+    div[data-testid="stAlert"] p, div[data-testid="stAlert"] div {{ color: {INK} !important; }}
+    
     div[data-testid="stAlert"] p {{ color: {INK}; }}
 
     /* dropdown*/
