@@ -75,17 +75,20 @@ def load_css():
     .result-card h3 {{ margin: 0 0 6px 0; }}
     .result-card p {{ margin: 0; color: {SOFT_INK}; }}
     
-    /* success box ("Best model...")*/
+       /* success box ("Best model...") */
+    div[data-testid="stAlert"],
+    div[data-testid="stAlertContainer"] {{
+        background: {CARD} !important;
+        color: {INK} !important;
+        border-radius: 14px !important;
+    }}
     div[data-testid="stAlert"] {{
-        background: {CARD} !important; 
-        color: {INK} !important; 
-        border-radius: 14px !important; 
-        border: 1px solid {ACCENT} !important;
         border-left: 6px solid {ACCENT} !important;
     }}
-    div[data-testid="stAlert"] p, div[data-testid="stAlert"] div {{ color: {INK} !important; }}
-    
-    div[data-testid="stAlert"] p {{ color: {INK}; }}
+    div[data-testid="stAlert"] *,
+    div[data-testid="stAlertContainer"] * {{
+        color: {INK} !important;
+    }}
 
     /* dropdown*/
     div[data-baseweb="select"] > div {{
