@@ -134,7 +134,7 @@ with tab3:
             "F1-score": f"{m['f1'] * 100:.2f}%",
         })
     st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
-    st.success(f"Best model (highest F1-score): {best_name}")
+    result_card("genuine", "Best model (highest F1-score)", best_name)
 
     # fr-09: comparison graph
     st.pyplot(model_comparison_chart(metrics))
