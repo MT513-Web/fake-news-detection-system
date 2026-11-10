@@ -3,7 +3,7 @@
 A Streamlit web app that classifies a news article as **potentially fake** or
 **potentially genuine** using TF-IDF features and machine-learning models.
 
-**Live demo:** _add link after deployment_
+**Live demo:** https://fake-news-detection-system-gqjk8ecl3bxnugkbczmpdw.streamlit.app/
 
 > The app predicts from writing patterns learned from the dataset. It does not
 > verify the factual accuracy of an article.
