@@ -11,6 +11,8 @@ from day_22_preprocessing import clean_text
 from style import load_css, hero, stat_card, result_card
 from charts import class_distribution_chart, model_comparison_chart, confusion_matrix_chart
 from samples import SAMPLES
+from style import load_css, hero, stat_card, result_card, note_card
+
 
 st.set_page_config(page_title="Fake News Detection System", page_icon="📰", layout="centered")
 load_css()
@@ -134,7 +136,7 @@ with tab3:
             "F1-score": f"{m['f1'] * 100:.2f}%",
         })
     st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
-    result_card("genuine", "Best model (highest F1-score)", best_name)
+    note_card(f"Best model (highest F1-score): <b>{best_name}</b>")
 
     # fr-09: comparison graph
     st.pyplot(model_comparison_chart(metrics))

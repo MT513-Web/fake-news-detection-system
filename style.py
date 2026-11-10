@@ -75,6 +75,11 @@ def load_css():
     .result-card h3 {{ margin: 0 0 6px 0; }}
     .result-card p {{ margin: 0; color: {SOFT_INK}; }}
     
+        .note-card {{
+        background: {GENUINE_BG}; border-left: 6px solid {GENUINE_LINE};
+        border-radius: 14px; padding: 12px 18px; color: {INK};
+    }}
+    
        /* success box ("Best model...") */
     div[data-testid="stAlert"],
     div[data-testid="stAlertContainer"] {{
@@ -116,3 +121,7 @@ def stat_card(label, value):
 def result_card(kind, title, message):
     st.markdown(f'<div class="result-card result-{kind}"><h3>{title}</h3>'
                 f'<p>{message}</p></div>', unsafe_allow_html=True)
+    
+# small one-line note card
+def note_card(text):
+    st.markdown(f'<div class="note-card">{text}</div>', unsafe_allow_html=True)
